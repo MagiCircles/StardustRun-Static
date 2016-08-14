@@ -57,7 +57,7 @@ function loadPokedex(pane, account, parameters) {
 function loadPokemons(pane, account) {
     pane.html('<i class="flaticon-loading"></i>');
     var account_id = account.data('account-id');
-    $.get('/ajax/ownedpokemons/?account=' + account_id + '&ajax_modal_only&back_to_profile', function(data) {
+    $.get('/ajax/ownedpokemons/?account=' + account_id + '&ajax_modal_only&back_to_profile&reverse_order=on', function(data) {
 	if (data.trim() == '') {
 	    pane.html('<div class="padding20"><div class="alert alert-warning">' + gettext('No result.') + '</div></div>');
 	} else {
