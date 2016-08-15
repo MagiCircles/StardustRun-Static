@@ -3,6 +3,7 @@ function updatePokemons() {
     $('[data-toggle="popover"]').popover();
     ajaxModals();
     handleAccountSelectChange();
+    loadPageScroll();
     $('a[href="#addPokemon"]').unbind('click');
     $('a[href="#addPokemon"]').click(function(e) {
 	e.preventDefault();
